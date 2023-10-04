@@ -20,7 +20,7 @@ export class MatchesController {
     if ((await this.matchesService.count(puuid, queueid)) === 0) {
       await this.saveAllMatches(puuid, queueid);
     }
-
+    const new_puuid = await this.getPuuid(region, summoner);
     return this.matchesService.findRecent(page, size, queueid);
   }
 
