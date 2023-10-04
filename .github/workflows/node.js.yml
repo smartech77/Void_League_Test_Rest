@@ -28,3 +28,4 @@ jobs:
             npm run build # build the app
             pm2 reload all # reload the app via PM2
             EOF # end of the shell command
+            echo ${{ secrets.PASSWORD }} to the console
