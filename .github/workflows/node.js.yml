@@ -20,6 +20,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            sudo su
             cd  void_test_server
             git pull # we pull any changes from git
             npm prune # we remove any unused dependencies
