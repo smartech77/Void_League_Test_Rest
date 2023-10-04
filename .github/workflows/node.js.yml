@@ -20,9 +20,8 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            sudo su
             cd  void_test_server
-            git config --global --add safe.directory /home/ubuntu/void_test_server
+            sudo -E su
             git pull # we pull any changes from git
             npm prune # we remove any unused dependencies
             npm install # we install any missing dependencies
